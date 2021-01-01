@@ -6,6 +6,7 @@ import SpotifyWebApi from "spotify-web-api-js";
 
 import "./App.css";
 import { useStateValue } from "./Store/Store";
+import Player from "./Player/Player";
 
 const spotify = new SpotifyWebApi();
 
@@ -35,9 +36,7 @@ function App() {
 		}
 	}, []);
 
-	return (
-		<div className="app">{!token ? <Login /> : <h1>AAgaya firs bsdk</h1>}</div>
-	);
+	return <div className="app">{!token ? <Login /> : <Player />}</div>;
 }
 
 export default App;
