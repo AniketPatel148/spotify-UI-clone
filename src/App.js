@@ -43,7 +43,11 @@ function App() {
 		}
 	}, []);
 
-	return <div className="app">{!token ? <Login /> : <Player />}</div>;
+	return (
+		<div className="app">
+			{!token ? <Login /> : <Player spotify={spotify} />}
+		</div>
+	);
 }
 
 export default App;

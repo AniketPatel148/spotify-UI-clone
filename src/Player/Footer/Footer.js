@@ -10,22 +10,37 @@ import PauseCircleOutlineIcon from "@material-ui/icons/PauseCircleOutline";
 import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
 
 import "./Footer.css";
+import { Grid, Slider } from "@material-ui/core";
 
 function Footer() {
 	return (
 		<div className="footer">
-			<div className="footer_left">
-				<p>Album and songs</p>
+			<div className="footer__left">
+				<img className="footer__albumLogo" src="" alt="" />
+				<div className="footer__songInfo">
+					<h4>BooYaH!</h4>
+					<p>Hell Yeah!</p>
+				</div>
 			</div>
 			<div className="footer__center">
 				<ShuffleIcon className="footer__green" />
-				<SkipPreviousIcon className="footer-icon" />
-				<PlayCircleOutlineIcon fontSize="large" className="footer-icon" />
-				<SkipNextIcon className="footer-icon" />
-				<RepeatIcon className="footer-green" />
+				<SkipPreviousIcon className="footer__icon" />
+				<PlayCircleOutlineIcon fontSize="large" className="footer__icon" />
+				<SkipNextIcon className="footer__icon" />
+				<RepeatIcon className="footer__green" />
 			</div>
 			<div className="footer__right">
-				<p>Volume controls</p>
+				<Grid container spacing={2}>
+					<Grid item>
+						<PlaylistPlayIcon />
+					</Grid>
+					<Grid item>
+						<VolumeDownIcon />
+					</Grid>
+					<Grid item xs>
+						<Slider />
+					</Grid>
+				</Grid>
 			</div>
 		</div>
 	);
